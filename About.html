@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="Styles/about-styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="Styles/Assets/BGICON.ico">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Personal Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html">Index</a>
+            <a href="About.html" class="active">About</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Certifications.html">Certifications</a>
+
+        </nav>
+    </header>
+
+    <section class="about">
+        <div class="about-content">
+            <h1>About Me</h1>
+            <div class="about-text">
+<p>
+    I'm <strong>Darshak D Pai</strong>, a recent graduate in <strong>Computer Science</strong> with a deep passion for 
+    <strong>technology and innovation</strong>. I am eager to kickstart my career in the tech industry, with a strong focus 
+    on <strong>software development</strong>.
+</p>
+<p>
+    Throughout my academic journey, I've honed my expertise in <strong>programming</strong>, <strong>problem-solving</strong>, 
+    and <strong>software engineering principles</strong>. I thrive on the challenge of creating <strong>efficient</strong>, 
+    <strong>scalable</strong>, and <strong>user-friendly applications</strong> that solve real-world problems. My passion extends 
+    to ensuring <strong>high-quality software</strong> through rigorous testing and attention to detail.
+</p>
+<p>
+    In addition to academic achievements, I have completed practical training in <strong>Java Fullstack Development</strong>, 
+    where I gained hands-on experience in programming languages like<strong>Java, MySQL, HTML/CSS alongside Java Frameworks like Springboot and Hibernate</strong>. 
+    These experiences have equipped me with a robust technical foundation and the adaptability to excel in dynamic environments.
+</p>
+<p>
+    I strive to achieve the perfect balance between <strong>aesthetics and functionality</strong>, ensuring that every project I undertake 
+    leaves a lasting impression. I am particularly drawn to collaborating with teams that prioritize <strong>innovation</strong>, 
+    <strong>user-centric design</strong>, and <strong>cutting-edge technologies</strong>.
+</p>
+<p>
+    Beyond the technical aspects, I pride myself on my <strong>communication skills</strong>, <strong>team collaboration</strong>, and ability to 
+    <strong>lead and manage projects effectively</strong>. These traits, coupled with my technical expertise, enable me to make meaningful 
+    contributions to any team or project.
+</p>
+<p>
+    I am a lifelong learner who embraces challenges as opportunities to grow. Whether it's learning new programming languages, exploring 
+    emerging frameworks, or contributing to open-source projects, I am committed to continuous improvement and staying at the forefront 
+    of the tech industry.
+</p>
+<p>
+    Feel free to explore my <strong>portfolio</strong> on my to discover the diverse range of 
+    projects I've worked on. I'm excited about the possibility of collaborating on impactful projects and bringing innovative ideas to life. 
+    Let's connect and create something amazing together!
+</p>
+
+
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Darshak D Pai. All Rights Reserved.</p>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/darshakpai/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Darxcodes" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.header');
+    
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+    
+            if (currentScroll > lastScrollTop) {
+                // Scrolling Down
+                navbar.classList.add('hidden');
+            } else {
+                // Scrolling Up
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or Negative Scroll
+        });
+    </script>
+</body>
+</html>

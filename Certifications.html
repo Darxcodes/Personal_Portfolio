@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+    <link rel="stylesheet" href="Styles/certification-styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="Styles/Assets/BGICON.ico">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Personal Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html">Index</a>
+            <a href="About.html">About</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Certifications.html" class="active">Certifications</a>
+        </nav>
+    </header>
+
+    <section class="certifications">
+        <div class="certifications-content">
+            <h1>My Certifications</h1>
+            <p class="certifications-intro">
+                Here are some of the certifications I have earned during my academic journey.
+            </p>
+
+            <div class="certifications-list">
+                <!-- Certification Item 1 -->
+                    <div class="certification-item">
+                        <h2>Certificate Course in Cyber and Information security</h2>
+                        <p><strong>Issuing Organization:</strong> FACE</p>
+                        <img src="Styles/Assets/FACE.jpg" alt="CyberSAFE Badge" class="certificate-image">
+                    </div>
+
+                <!-- Certification Item 2 -->
+                <div class="certification-item">
+                    <h2>Certificate Course on Android App Development</h2>
+                    <p><strong>Issuing Organization:</strong> Kwicklab Infotech</p>
+                    <img src="Styles/Assets/KwickLab.JPG" alt="Full Stack Developer Certification" class="certificate-image">
+                </div>
+
+                <!-- Certification Item 3 -->
+                <div class="certification-item">
+                    <h2>Workshop on Concepts Of Metaverse</h2>
+                    <p><strong>Issuing Organization:</strong> IEEE</p>
+                    <img src="Styles/Assets/IEEE.jpg" alt="Java Programming Certification" class="certificate-image">
+                </div>
+
+                <!-- Certification Item 4 -->
+                <div class="certification-item">
+                    <h2>DevOps Fundamentals</h2>
+                    <p><strong>Issuing Organization:</strong> NIT Calicut</p>
+                    <img src="Styles/Assets/Devops.jpg" alt="React Frontend Development Certification" class="certificate-image">
+                </div>
+
+                <!-- Certification Item 5 -->
+                <div class="certification-item">
+                    <h2>Getting Started with Node.js</h2>
+                    <p><strong>Issuing Organization:</strong> Cognitive Class</p>
+                    <img src="Styles/Assets/IBM.jpg" alt="SQL Database Management Certification" class="certificate-image">
+                </div>
+                <div class="certification-item">
+                    <h2>CyberSAFE Certification</h2>
+                    <p><strong>Issuing Organization:</strong> CDAC & CERTNEXUS</p>
+                    <img src="Styles/Assets/CyberSafe.jpg" alt="SQL Database Management Certification" class="certificate-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Darshak D Pai. All Rights Reserved.</p>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/darshakpai/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Darxcodes" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.header');
+    
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+    
+            if (currentScroll > lastScrollTop) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+        });
+    </script>
+</body>
+</html>

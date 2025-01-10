@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #010206;
+    color: #ededed;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+}
+
+.header.hidden {
+    top: -80px;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: color .3s ease-in-out;
+}
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.navbar a.active {
+    color: #00abf0;
+}
+
+.navbar a:hover {
+    color: #00abf0;
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.certifications h1 {
+    font-size: 36px;
+    color: #00abf0;
+    margin-bottom: 20px;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.certifications-intro {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Certification Items */
+.certifications-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.certification-item {
+    background: #1c1c1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease forwards;
+    animation-delay: 1s; /* Base delay */
+}
+
+/* Staggered animation for items */
+.certification-item:nth-child(1) {
+    animation-delay: 1.2s;
+}
+
+.certification-item:nth-child(2) {
+    animation-delay: 1.4s;
+}
+
+.certification-item:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+.certification-item:nth-child(4) {
+    animation-delay: 1.8s;
+}
+
+.certification-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.certification-item h2 {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.certification-item p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.certificate-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px 10%;
+    background: #000000;
+    color: #ededed;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #00abf0;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-icons a:hover {
+    color: #ffffff;
+}
+
+/* Keyframes */
+@keyframes popUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}

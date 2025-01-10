@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="Styles/projects-styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="Styles/Assets/BGICON.ico">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Personal Portfolio</a>
+        <nav class="navbar">
+            <a href="index.html">Index</a>
+            <a href="About.html">About</a>
+            <a href="Projects.html" class="active">Projects</a>
+            <a href="Certifications.html">Certifications</a>
+
+        </nav>
+    </header>
+
+    <section class="projects">
+        <div class="projects-header">
+            <h1>My Projects</h1>
+            <p>Here are some of the projects I have worked on.</p>
+        </div>
+
+        <div class="projects-list">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <h2>Chatbot for Disease Prediction and Ayurvedic Treatment Recommendation</h2>
+                <p>
+                    This chatbot was developed as my final-year project to combine the power of modern technology with traditional healthcare practices. The chatbot utilizes machine learning algorithms, specifically the Random Forest model, to predict diseases based on user symptoms. Additionally, it provides Ayurvedic treatment recommendations tailored to the user's input.
+                </p>
+                <p>
+                    Key Features:
+                    <ul type="none">
+                        <li>Interactive and user-friendly chatbot interface</li>
+                        <li>Accurate disease prediction using Ayurvedic data and machine learning</li>
+                        <li>Seamless integration of modern predictive tools with traditional medicine</li>
+                    </ul>
+                </p>
+                <span class="technologies">Technologies: Python, Machine Learning (Random Forest)</span>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                <h2>Price Tracking Web Application</h2>
+                <p>
+                    This web application was created as a minor project to address the challenge of price fluctuations in e-commerce. It allows users to track and compare product prices across multiple platforms, helping them make informed purchasing decisions. Web scraping techniques were used to extract data dynamically from e-commerce websites.
+                </p>
+                <p>
+                    Key Features:
+                    <ul type="none">
+                        <li>Real-time price tracking from various e-commerce platforms</li>
+                        <li>Product sorting and filtering options for better comparisons</li>
+                        <li>User-friendly interface for seamless navigation and interaction</li>
+                    </ul>
+                </p>
+                <span class="technologies">Technologies: Python, BeautifulSoup4</span>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item">
+                <h2>Bitcoin Click Game</h2>
+                <p>
+                    A fun and engaging Bitcoin-themed clicker game, this project showcases my creativity and frontend development skills. The game challenges players to collect as many Bitcoins as possible through rapid clicks, featuring an interactive interface and dynamic score tracking.
+                </p>
+                <p>
+                    Key Features:
+                    <ul type="none">
+                        <li>Interactive design with dynamic animations</li>
+                        <li>Real-time score tracking and leaderboard</li>
+                        <li>Optimized for smooth performance on various devices</li>
+                    </ul>
+                </p>
+                <span class="technologies">Technologies: HTML, CSS, JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Darshak D Pai. All Rights Reserved.</p>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/darshakpai/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Darxcodes" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.header');
+    
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+    
+            if (currentScroll > lastScrollTop) {
+                // Scrolling Down
+                navbar.classList.add('hidden');
+            } else {
+                // Scrolling Up
+                navbar.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or Negative Scroll
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #010206;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+}
+.header.hidden {
+    top: -80px; 
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s;
+    position: relative;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    animation: showRight 1s ease forwards;
+    animation-delay: .8s;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+/* Projects Section */
+.projects {
+    padding: 120px 10% 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-header h1 {
+    font-size: 36px;
+    color: #00abf0;
+    margin-bottom: 20px;
+    text-align: center;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+.projects-header p{
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 40px;
+    line-height: 1.6;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: popUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Project Items */
+.projects-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Space between the boxes */
+    align-items: center; /* Center the boxes horizontally */
+}
+
+.project-item {
+    width: 80%;
+    max-width: 1500px;
+    background: #1c1c1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    /* Flexbox for content alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 0.8s ease forwards;
+    animation-delay: 1s;
+}
+
+/* Text inside the project items */
+.project-item h2 {
+    font-size: 22px;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 15px;
+    color: #cccccc;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-item .technologies {
+    font-size: 14px;
+    color: #00abf0;;
+    margin-top: 10px;
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 10%;
+    background: #000000;
+    color: #ededed;
+    font-size: 14px;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #00abf0;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #ffffff;
+}
+
+/* Keyframes */
+@keyframes popUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
